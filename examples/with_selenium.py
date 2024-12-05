@@ -39,5 +39,4 @@ try:
     time.sleep(5)
 
 finally:
-    # Close the browser
     driver.quit()

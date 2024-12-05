@@ -1,18 +1,10 @@
 from oxymouse.algorithms.base import MouseMovement
-from oxymouse.algorithms.bezier_mouse.bezier_mouse import BezierMouse
-from oxymouse.algorithms.gaussian_mouse.gaussian_mouse import GaussianMouse
-from oxymouse.algorithms.perlin_mouse.perlin_mouse import PerlinMouse
+from oxymouse.config import mouses
 
 
 class OxyMouse:
     def __init__(self, algorithm: str) -> None:
         self.mouse: MouseMovement
-
-        mouses = {
-            "perlin": PerlinMouse(),
-            "bezier": BezierMouse(),
-            "gaussian": GaussianMouse()
-        }
 
         self.mouse = mouses.get(algorithm)
         if not self.mouse:

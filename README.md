@@ -27,7 +27,7 @@ Specify `algorithm` an algorithm.
 
 Supported algorithms:
 
-`bezier`, `gaussian`, `perlin`
+`bezier`, `gaussian`, `perlin`, 'oxy'
 
 ```python
 
@@ -96,6 +96,11 @@ Perfect for simulating human-like mouse movements
 
 ![perlin.png](imgs/perlin.png)
 
+### OxyMouse
+
+Custom algorithm that generates mouse movements using a custom algorithm.
+
+![oxy.png](imgs/oxy.png)
 
 ### Testing
 
