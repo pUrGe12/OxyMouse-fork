@@ -1,9 +1,8 @@
 import asyncio
 import random
 
-from playwright.async_api import async_playwright
-
 from oxylabs import OxyMouse
+from playwright.async_api import async_playwright
 
 
 async def generate_random_movements() -> list[tuple[int, int]]:
@@ -24,7 +23,6 @@ async def main():
         page = await browser.new_page()
 
         try:
-            # Open example.com
             await page.goto("https://oxylabs.io", wait_until="domcontentloaded")
 
             movements = await generate_random_movements()

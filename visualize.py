@@ -1,13 +1,10 @@
 import typer
 from matplotlib import pyplot as plt
 
-from oxymouse.algorithms.bezier_mouse.bezier_mouse import BezierMouse
-from oxymouse.algorithms.gaussian_mouse.gaussian_mouse import GaussianMouse
-from oxymouse.algorithms.perlin_mouse.perlin_mouse import PerlinMouse
+from oxymouse.config import mouses
 
 app = typer.Typer()
 
-algorithm_name_to_algorithm_map = {"perlin": PerlinMouse, "bezier": BezierMouse, "gaussian": GaussianMouse}
 
 function_names_to_function_map = {
     "gc": "generate_coordinates",
@@ -20,7 +17,7 @@ function_names_to_function_map = {
 def visualize_mouse_movements(algorithm: str, fn: str) -> None:
     print(f"Visualizing {algorithm} with {fn} function")
 
-    algorithm_instance = algorithm_name_to_algorithm_map[algorithm]
+    algorithm_instance = mouses[algorithm]
     function_name = function_names_to_function_map[fn]
 
     coordinates = getattr(algorithm_instance, function_name)()
