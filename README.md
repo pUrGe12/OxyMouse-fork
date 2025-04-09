@@ -6,10 +6,11 @@
     </p>
 <h4 align="center">
     <a href="https://discord.gg/cZZ7Bw4xN3">
-        <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Discord&color=blue&logo=Discord&style=flat-square" alt="Discord">
+        <img 
     </a>
 </h4>
 
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/Pds3gBmKMH)
 
 OxyMouse is a Python library for generating mouse movements. 
 
